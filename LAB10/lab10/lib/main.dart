@@ -1,19 +1,24 @@
-import 'dart:ui';
+//import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:lab10/choose_location.dart';
-import 'package:lab10/home.dart';
-import 'package:lab10/loading.dart';
+import 'package:lab10/pages/choose_location.dart';
+import 'package:lab10/pages/home.dart';
+import 'package:lab10/pages/loading.dart';
+
+import 'package:flutter/material.dart';
+
+/* // Code Test 1
+void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
+  '/': (context) => Loading(),
+  '/home': (context) => Home(),
+  '/location': (context) => ChooseLocation(),
+}));
+*/
 
 
-void main() => runApp(MaterialApp(
-// home: Home(),
-// instead of making home: property to make any page to initialize at beginning...
-// we can use following code ....
-// initialRoute: '/home',
-    initialRoute: '/',
-    routes: {
-      '/': (context) => Loading(),
-      '/home': (context) => Home(),
-      '/location': (context) => ChooseLocation(),
-    }
-));
+
+ // Code Test 2
+void main() => runApp(MaterialApp(initialRoute: '/', routes: {
+  '/': (context) => Loading(),
+  '/home': (context) => Home(),
+  '/location': (context) => ChooseLocation(),
+}));
